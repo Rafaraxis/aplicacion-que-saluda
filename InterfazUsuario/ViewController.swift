@@ -9,9 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var lblHola: UILabel!
+    
+    @IBOutlet weak var lblSaludo: UILabel!
 
+    @IBOutlet weak var txtNombre: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        lblHola.text = "Holaaaa!!!"
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,6 +25,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func doTapSaludar(_ sender: Any) {
+        lblSaludo.text = "Hola \(txtNombre.text!)"
+    }
 
 }
 
